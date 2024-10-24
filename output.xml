@@ -1,0 +1,2319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-10-24T17:10:04.158576" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Desenvolvimento\Projetos_VisualCode\Projeto_Robot\saucedemo-robot\tests">
+<suite id="s1-s1" name="Home" source="C:\Desenvolvimento\Projetos_VisualCode\Projeto_Robot\saucedemo-robot\tests\home.robot">
+<test id="s1-s1-t1" name="Acessar homepage" line="21">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:05.892210" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\a95ac007-36be-4bcd-b4ab-293cda952221"}</msg>
+<msg time="2024-10-24T17:10:06.386245" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\a95ac007-36be-4bcd-b4ab-293cda952221"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:05.892210" elapsed="0.494035"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:07.708532" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:07.708532" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:06.386245" elapsed="1.322287"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:05.892210" elapsed="1.817316"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:07.826845" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:07.712571" elapsed="0.115271"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:07.912195" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:07.827842" elapsed="0.084353"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:07.711523" elapsed="0.200672"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:07.938781" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:07.912195" elapsed="0.026586"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:07.938781" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:07.938781" elapsed="0.042793"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:07.998812" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:07.981574" elapsed="0.017238"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:08.000805" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:07.999808" elapsed="0.053755"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:08.054570" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:08.053563" elapsed="0.215556"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:07.912195" elapsed="0.356924"/>
+</kw>
+<kw name="Validar login com sucesso" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:08.298203" level="INFO">Waited for Element with selector css=span[data-test=title] at state visible</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:08.269119" elapsed="0.029084"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:08.345497" level="INFO">Text: 'Products'</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>equal</arg>
+<arg>${texto_logado}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:08.298203" elapsed="0.047294"/>
+</kw>
+<arg>Products</arg>
+<status status="PASS" start="2024-10-24T17:10:08.269119" elapsed="0.076378"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:08.729991" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:08.345497" elapsed="0.384494"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:09.214184" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:08.729991" elapsed="0.484193"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:08.345497" elapsed="0.868687"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:05.884227" elapsed="3.329957"/>
+</test>
+<test id="s1-s1-t2" name="Adicionar produto no carrinho" line="26">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:09.317459" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\e87c07e0-6948-4c0d-8852-8d90b40cb6fb"}</msg>
+<msg time="2024-10-24T17:10:10.066904" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\e87c07e0-6948-4c0d-8852-8d90b40cb6fb"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:09.315460" elapsed="0.751444"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:11.568913" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:11.568913" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:10.066904" elapsed="1.502009"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:09.315460" elapsed="2.253453"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:11.639028" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:11.570913" elapsed="0.076125"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:11.721908" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:11.647038" elapsed="0.074870"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:11.569910" elapsed="0.159993"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:11.757817" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:11.729903" elapsed="0.027914"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:11.759814" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:11.758820" elapsed="0.048102"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:11.827082" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:11.807930" elapsed="0.019152"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:11.828093" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:11.827082" elapsed="0.038512"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:11.872165" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:11.865594" elapsed="0.206138"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:11.729903" elapsed="0.341829"/>
+</kw>
+<kw name="Validar login com sucesso" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:12.095435" level="INFO">Waited for Element with selector css=span[data-test=title] at state visible</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.071732" elapsed="0.023703"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:12.197292" level="INFO">Text: 'Products'</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>equal</arg>
+<arg>${texto_logado}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.095435" elapsed="0.101857"/>
+</kw>
+<arg>Products</arg>
+<status status="PASS" start="2024-10-24T17:10:12.071732" elapsed="0.125560"/>
+</kw>
+<kw name="Validar produto desejado" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:12.213289" level="INFO">Waited for Element with selector xpath=//div[contains(text(), 'Sauce Labs Backpack')] at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.197292" elapsed="0.015997"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:12.256351" level="INFO">Text: 'Sauce Labs Backpack'</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>equal</arg>
+<arg>${titulo_produto}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.215410" elapsed="0.040941"/>
+</kw>
+<arg>Sauce Labs Backpack</arg>
+<arg>${validando_prod}</arg>
+<status status="PASS" start="2024-10-24T17:10:12.197292" elapsed="0.059059"/>
+</kw>
+<kw name="Selecionar produto da página" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:12.280814" level="INFO">Waited for Element with selector id=add-to-cart-sauce-labs-backpack at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.256351" elapsed="0.024463"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:12.280814" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>${id_produto_desejado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.280814" elapsed="0.110860"/>
+</kw>
+<arg>${Backpack}</arg>
+<status status="PASS" start="2024-10-24T17:10:12.256351" elapsed="0.135323"/>
+</kw>
+<kw name="Validar quantidade no carrinho" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:12.411670" level="INFO">Waited for Element with selector css=span[data-test="shopping-cart-badge"] at state visible</msg>
+<arg>css=span[data-test="shopping-cart-badge"]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.393672" elapsed="0.017998"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:12.439803" level="INFO">Text: '1'</msg>
+<arg>css=span[data-test="shopping-cart-badge"]</arg>
+<arg>equal</arg>
+<arg>${quantidade_add}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.412666" elapsed="0.027137"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2024-10-24T17:10:12.392670" elapsed="0.047133"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:12.608040" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.439803" elapsed="0.168237"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:12.987051" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:12.608040" elapsed="0.379011"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:12.439803" elapsed="0.547248"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:09.310463" elapsed="3.676588"/>
+</test>
+<test id="s1-s1-t3" name="Selecionar todos os produtos" line="34">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:13.064874" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\c2991af9-3682-41b6-8f02-e4266696ae75"}</msg>
+<msg time="2024-10-24T17:10:13.549726" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\c2991af9-3682-41b6-8f02-e4266696ae75"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:13.064874" elapsed="0.484852"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:15.032036" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:15.032036" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:13.549726" elapsed="1.483310"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:13.064874" elapsed="1.968162"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:15.108551" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.035037" elapsed="0.073514"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:15.192945" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.108551" elapsed="0.084394"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:15.034037" elapsed="0.159909"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:15.219518" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.195349" elapsed="0.024169"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:15.220510" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.219518" elapsed="0.043454"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:15.279646" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.263974" elapsed="0.016672"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:15.282647" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.280646" elapsed="0.047854"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:15.329503" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.328500" elapsed="0.292794"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:15.195349" elapsed="0.425945"/>
+</kw>
+<kw name="Validar login com sucesso" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:15.656830" level="INFO">Waited for Element with selector css=span[data-test=title] at state visible</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.629297" elapsed="0.027533"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:15.715842" level="INFO">Text: 'Products'</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>equal</arg>
+<arg>${texto_logado}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.657860" elapsed="0.057982"/>
+</kw>
+<arg>Products</arg>
+<status status="PASS" start="2024-10-24T17:10:15.629297" elapsed="0.087544"/>
+</kw>
+<kw name="Validar produto desejado" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:15.739598" level="INFO">Waited for Element with selector xpath=//div[contains(text(), 'Sauce Labs Backpack')] at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.720840" elapsed="0.018758"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:15.783151" level="INFO">Text: 'Sauce Labs Backpack'</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>equal</arg>
+<arg>${titulo_produto}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.739598" elapsed="0.043553"/>
+</kw>
+<arg>Sauce Labs Backpack</arg>
+<arg>${validando_prod}</arg>
+<status status="PASS" start="2024-10-24T17:10:15.717842" elapsed="0.065309"/>
+</kw>
+<kw name="Selecionar produto da página" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:15.811938" level="INFO">Waited for Element with selector id=add-to-cart-sauce-labs-backpack at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.791076" elapsed="0.021867"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:15.813939" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>${id_produto_desejado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.812943" elapsed="0.095808"/>
+</kw>
+<arg>${Backpack}</arg>
+<status status="PASS" start="2024-10-24T17:10:15.790674" elapsed="0.118077"/>
+</kw>
+<kw name="Selecionar produto da página" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:15.926230" level="INFO">Waited for Element with selector id=add-to-cart-sauce-labs-bolt-t-shirt at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.908751" elapsed="0.017479"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:15.927238" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-bolt-t-shirt'.</msg>
+<arg>${id_produto_desejado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.927238" elapsed="0.070646"/>
+</kw>
+<arg>${T-Shirt}</arg>
+<status status="PASS" start="2024-10-24T17:10:15.908751" elapsed="0.090118"/>
+</kw>
+<kw name="Selecionar produto da página" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:16.010886" level="INFO">Waited for Element with selector id=add-to-cart-sauce-labs-onesie at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:15.999859" elapsed="0.011027"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:16.011872" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-onesie'.</msg>
+<arg>${id_produto_desejado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.010886" elapsed="0.071631"/>
+</kw>
+<arg>${Onesie}</arg>
+<status status="PASS" start="2024-10-24T17:10:15.999859" elapsed="0.082658"/>
+</kw>
+<kw name="Selecionar produto da página" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:16.102157" level="INFO">Waited for Element with selector id=add-to-cart-sauce-labs-bike-light at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.085526" elapsed="0.017629"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:16.104151" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-bike-light'.</msg>
+<arg>${id_produto_desejado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.103155" elapsed="0.040538"/>
+</kw>
+<arg>${Bike_Light}</arg>
+<status status="PASS" start="2024-10-24T17:10:16.084509" elapsed="0.059184"/>
+</kw>
+<kw name="Selecionar produto da página" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:16.162467" level="INFO">Waited for Element with selector id=add-to-cart-sauce-labs-fleece-jacket at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.143693" elapsed="0.018774"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:16.163462" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-fleece-jacket'.</msg>
+<arg>${id_produto_desejado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.162467" elapsed="0.046513"/>
+</kw>
+<arg>${Jacket}</arg>
+<status status="PASS" start="2024-10-24T17:10:16.143693" elapsed="0.065406"/>
+</kw>
+<kw name="Selecionar produto da página" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:16.223116" level="INFO">Waited for Element with selector id=add-to-cart-test.allthethings()-t-shirt-(red) at state visible</msg>
+<arg>${id_produto_desejado}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.210054" elapsed="0.013062"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:16.224112" level="INFO">Clicks the element 'id=add-to-cart-test.allthethings()-t-shirt-(red)'.</msg>
+<arg>${id_produto_desejado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.223116" elapsed="0.036370"/>
+</kw>
+<arg>${T-Shirt-Red}</arg>
+<status status="PASS" start="2024-10-24T17:10:16.210054" elapsed="0.049432"/>
+</kw>
+<kw name="Validar quantidade no carrinho" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:16.273132" level="INFO">Waited for Element with selector css=span[data-test="shopping-cart-badge"] at state visible</msg>
+<arg>css=span[data-test="shopping-cart-badge"]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.259486" elapsed="0.013646"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:16.303139" level="INFO">Text: '6'</msg>
+<arg>css=span[data-test="shopping-cart-badge"]</arg>
+<arg>equal</arg>
+<arg>${quantidade_add}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.273132" elapsed="0.030007"/>
+</kw>
+<arg>6</arg>
+<status status="PASS" start="2024-10-24T17:10:16.259486" elapsed="0.043653"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:16.474706" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.305146" elapsed="0.170578"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:16.918838" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:16.475724" elapsed="0.443114"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:16.304133" elapsed="0.614705"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:13.056880" elapsed="3.861958"/>
+</test>
+<test id="s1-s1-t4" name="Ordenar produtos de Z to A" line="47">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:17.018174" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\29da1162-0e38-4976-b906-9280e363f341"}</msg>
+<msg time="2024-10-24T17:10:17.486243" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\29da1162-0e38-4976-b906-9280e363f341"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:17.017189" elapsed="0.469054"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:19.133120" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:19.133120" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:17.486243" elapsed="1.646877"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:17.017189" elapsed="2.115931"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:19.193342" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.134128" elapsed="0.059214"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:19.291979" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.193342" elapsed="0.099640"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:19.134128" elapsed="0.158854"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:19.317929" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.296705" elapsed="0.022219"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:19.320929" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.318924" elapsed="0.083862"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:19.430585" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.403791" elapsed="0.026794"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:19.432594" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.431591" elapsed="0.052178"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:19.485317" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.484780" elapsed="0.319600"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:19.294990" elapsed="0.509390"/>
+</kw>
+<kw name="Validar login com sucesso" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:19.828602" level="INFO">Waited for Element with selector css=span[data-test=title] at state visible</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.804380" elapsed="0.024222"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:19.887142" level="INFO">Text: 'Products'</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>equal</arg>
+<arg>${texto_logado}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.828602" elapsed="0.058540"/>
+</kw>
+<arg>Products</arg>
+<status status="PASS" start="2024-10-24T17:10:19.804380" elapsed="0.083769"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:20.229107" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-4.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-4.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:19.890147" elapsed="0.339968"/>
+</kw>
+<kw name="Selecionar tipo de ordenação" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:20.247167" level="INFO">Waited for Element with selector css=[class="product_sort_container"] at state visible</msg>
+<arg>css=[class="product_sort_container"]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:20.232114" elapsed="0.015053"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-10-24T17:10:20.249153" level="INFO">Selects the option(s) Name (Z to A) by attribute SelectAttribute.label from element css=[class="product_sort_container"].</msg>
+<arg>css=[class="product_sort_container"]</arg>
+<arg>text</arg>
+<arg>${tipo_ordenacao}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:20.248159" elapsed="0.066995"/>
+</kw>
+<arg>Name (Z to A)</arg>
+<status status="PASS" start="2024-10-24T17:10:20.231107" elapsed="0.084047"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:20.505745" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-5.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-5.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:20.317178" elapsed="0.188567"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:20.665187" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-6.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-6.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:20.505745" elapsed="0.159442"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:21.165204" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:20.665187" elapsed="0.500017"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:20.505745" elapsed="0.659459"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:17.012177" elapsed="4.153027"/>
+</test>
+<test id="s1-s1-t5" name="Ordenar preços do mais baixo ao mais alto" line="55">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:21.251283" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\546979b1-cf19-4a4c-878a-ad2f4d5e9606"}</msg>
+<msg time="2024-10-24T17:10:21.893787" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\546979b1-cf19-4a4c-878a-ad2f4d5e9606"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:21.251283" elapsed="0.642504"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:23.500088" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:23.501089" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:21.893787" elapsed="1.607302"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:21.251283" elapsed="2.249806"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:23.594827" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:23.503087" elapsed="0.091740"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:23.670634" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:23.594827" elapsed="0.075807"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:23.502085" elapsed="0.168549"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:23.698357" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:23.670634" elapsed="0.027723"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:23.698357" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:23.698357" elapsed="0.084474"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:23.815182" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:23.783821" elapsed="0.031361"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:23.817174" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:23.816174" elapsed="0.046887"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:23.864064" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:23.863061" elapsed="0.287804"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:23.670634" elapsed="0.480231"/>
+</kw>
+<kw name="Validar login com sucesso" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:24.190781" level="INFO">Waited for Element with selector css=span[data-test=title] at state visible</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:24.158875" elapsed="0.032899"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:24.261185" level="INFO">Text: 'Products'</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>equal</arg>
+<arg>${texto_logado}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:24.192775" elapsed="0.068410"/>
+</kw>
+<arg>Products</arg>
+<status status="PASS" start="2024-10-24T17:10:24.158875" elapsed="0.102310"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:24.597094" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-7.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-7.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:24.261185" elapsed="0.335909"/>
+</kw>
+<kw name="Selecionar tipo de ordenação" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:24.609098" level="INFO">Waited for Element with selector css=[class="product_sort_container"] at state visible</msg>
+<arg>css=[class="product_sort_container"]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:24.599086" elapsed="0.010012"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-10-24T17:10:24.610087" level="INFO">Selects the option(s) Price (low to high) by attribute SelectAttribute.label from element css=[class="product_sort_container"].</msg>
+<arg>css=[class="product_sort_container"]</arg>
+<arg>text</arg>
+<arg>${tipo_ordenacao}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:24.609098" elapsed="0.045134"/>
+</kw>
+<arg>Price (low to high)</arg>
+<status status="PASS" start="2024-10-24T17:10:24.598086" elapsed="0.056146"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:24.833784" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-8.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-8.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:24.660437" elapsed="0.173347"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:25.001219" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-9.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-9.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:24.833784" elapsed="0.168435"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:25.598634" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:25.002219" elapsed="0.596415"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:24.833784" elapsed="0.764850"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:21.243272" elapsed="4.355362"/>
+</test>
+<test id="s1-s1-t6" name="Ordenar preços de mais alto pro mais baixo" line="63">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:25.681532" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\833221c6-3e57-4f20-93da-c60baf522050"}</msg>
+<msg time="2024-10-24T17:10:26.296028" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\833221c6-3e57-4f20-93da-c60baf522050"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:25.679544" elapsed="0.616484"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:27.882810" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:27.882810" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:26.296028" elapsed="1.586782"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:25.678532" elapsed="2.204278"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:27.964016" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:27.885812" elapsed="0.078204"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:28.100673" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:27.972029" elapsed="0.128644"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:27.884812" elapsed="0.215861"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:28.133518" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:28.100673" elapsed="0.032845"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:28.133518" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:28.133518" elapsed="0.066405"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:28.226923" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:28.200911" elapsed="0.027003"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:28.230735" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:28.229183" elapsed="0.059396"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:28.288579" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:28.288579" elapsed="0.298473"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:28.100673" elapsed="0.486379"/>
+</kw>
+<kw name="Validar login com sucesso" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:28.613694" level="INFO">Waited for Element with selector css=span[data-test=title] at state visible</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:28.587052" elapsed="0.027638"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:28.662152" level="INFO">Text: 'Products'</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>equal</arg>
+<arg>${texto_logado}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:28.615692" elapsed="0.046460"/>
+</kw>
+<arg>Products</arg>
+<status status="PASS" start="2024-10-24T17:10:28.587052" elapsed="0.075100"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:29.001899" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-10.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-10.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:28.662152" elapsed="0.339747"/>
+</kw>
+<kw name="Selecionar tipo de ordenação" owner="Home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:29.016960" level="INFO">Waited for Element with selector css=[class="product_sort_container"] at state visible</msg>
+<arg>css=[class="product_sort_container"]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:29.001899" elapsed="0.016058"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-10-24T17:10:29.018953" level="INFO">Selects the option(s) Price (high to low) by attribute SelectAttribute.label from element css=[class="product_sort_container"].</msg>
+<arg>css=[class="product_sort_container"]</arg>
+<arg>text</arg>
+<arg>${tipo_ordenacao}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:29.017957" elapsed="0.056599"/>
+</kw>
+<arg>Price (high to low)</arg>
+<status status="PASS" start="2024-10-24T17:10:29.001899" elapsed="0.073640"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:29.284237" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-11.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-11.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:29.076538" elapsed="0.207699"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:29.469212" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-12.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-12.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:29.286262" elapsed="0.183934"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:29.978496" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:29.470196" elapsed="0.508300"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:29.285235" elapsed="0.693261"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:25.671287" elapsed="4.307209"/>
+</test>
+<doc>Suite de testes automatizados para página de home saucedemo</doc>
+<status status="PASS" start="2024-10-24T17:10:04.206574" elapsed="25.866476"/>
+</suite>
+<suite id="s1-s2" name="Login" source="C:\Desenvolvimento\Projetos_VisualCode\Projeto_Robot\saucedemo-robot\tests\login.robot">
+<test id="s1-s2-t1" name="Realizar login com sucesso" line="18">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:30.184048" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\ace7b44a-265b-41a3-80a7-a7fb528670d8"}</msg>
+<msg time="2024-10-24T17:10:30.731390" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\ace7b44a-265b-41a3-80a7-a7fb528670d8"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:30.184048" elapsed="0.547342"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:32.164792" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:32.164792" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:30.731390" elapsed="1.433402"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:30.184048" elapsed="1.981744"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:32.276777" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.168796" elapsed="0.108980"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:32.369619" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.277776" elapsed="0.091843"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:32.167791" elapsed="0.201828"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:32.394830" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.369619" elapsed="0.026203"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:32.397597" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.395822" elapsed="0.060760"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:32.473673" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.457586" elapsed="0.017097"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:32.475674" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.474683" elapsed="0.032002"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:32.515238" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.514232" elapsed="0.218417"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:32.369619" elapsed="0.363030"/>
+</kw>
+<kw name="Validar login com sucesso" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:32.759681" level="INFO">Waited for Element with selector css=span[data-test=title] at state visible</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.732649" elapsed="0.027032"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:32.864977" level="INFO">Text: 'Products'</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>equal</arg>
+<arg>${texto_logado}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.764327" elapsed="0.100650"/>
+</kw>
+<arg>Products</arg>
+<status status="PASS" start="2024-10-24T17:10:32.732649" elapsed="0.132328"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:33.187943" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-13.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-13.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:32.864977" elapsed="0.330986"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:33.674968" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:33.195963" elapsed="0.479005"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:32.864977" elapsed="0.809991"/>
+</kw>
+<tag>Login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2024-10-24T17:10:30.181859" elapsed="3.493109"/>
+</test>
+<test id="s1-s2-t2" name="Realizar login com usuario bloqueado" line="24">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:33.749917" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\b8451b10-2595-4da1-ab1d-f1a4f4357534"}</msg>
+<msg time="2024-10-24T17:10:34.400050" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\b8451b10-2595-4da1-ab1d-f1a4f4357534"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:33.749917" elapsed="0.650133"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:35.743236" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:35.743236" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:34.400050" elapsed="1.343186"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:33.749917" elapsed="1.993319"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:35.844374" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:35.746235" elapsed="0.098139"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:35.943132" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:35.844374" elapsed="0.098758"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:35.745236" elapsed="0.197896"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:35.961584" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:35.946124" elapsed="0.016472"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:35.964001" level="INFO">Fills the text 'locked_out_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:35.962596" elapsed="0.054877"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:36.043079" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:36.018470" elapsed="0.025611"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:36.047082" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:36.045084" elapsed="0.048647"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:36.096699" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:36.094701" elapsed="0.144334"/>
+</kw>
+<arg>${userblocked}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:35.945131" elapsed="0.293904"/>
+</kw>
+<kw name="Validar mensagem de erro" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:36.277774" level="INFO">Waited for Element with selector css=div.error-message-container.error at state visible</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:36.247039" elapsed="0.031791"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:36.349759" level="INFO">Text: 'Epic sadface: Sorry, this user has been locked out.'</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>equal</arg>
+<arg>${msgerro}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:36.278830" elapsed="0.070929"/>
+</kw>
+<arg>Epic sadface: Sorry, this user has been locked out.</arg>
+<status status="PASS" start="2024-10-24T17:10:36.247039" elapsed="0.102720"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:36.556303" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-14.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-14.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:36.349759" elapsed="0.206544"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:37.021929" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:36.556303" elapsed="0.465626"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:36.349759" elapsed="0.672170"/>
+</kw>
+<tag>invalid</tag>
+<tag>Login</tag>
+<status status="PASS" start="2024-10-24T17:10:33.740320" elapsed="3.289604"/>
+</test>
+<test id="s1-s2-t3" name="Realizar login com usuario em branco" line="30">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:37.108336" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\0687129f-e73f-46fe-886e-ac05182d000e"}</msg>
+<msg time="2024-10-24T17:10:37.734722" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\0687129f-e73f-46fe-886e-ac05182d000e"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:37.108336" elapsed="0.626386"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:39.167565" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:39.168570" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:37.734722" elapsed="1.433848"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:37.108336" elapsed="2.060234"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:39.282784" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.170579" elapsed="0.112205"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:39.378578" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.283786" elapsed="0.094792"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:39.169572" elapsed="0.209006"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:39.403933" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.378578" elapsed="0.026352"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:39.406941" level="INFO">Fills the text '' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.404930" elapsed="0.053866"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:39.474803" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.459806" elapsed="0.015991"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:39.476802" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.475797" elapsed="0.038272"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:39.514069" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.514069" elapsed="0.126222"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:39.378578" elapsed="0.261713"/>
+</kw>
+<kw name="Validar mensagem de erro" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:39.665838" level="INFO">Waited for Element with selector css=div.error-message-container.error at state visible</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.644288" elapsed="0.021650"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:39.727004" level="INFO">Text: 'Epic sadface: Username is required'</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>equal</arg>
+<arg>${msgerro}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.665938" elapsed="0.061066"/>
+</kw>
+<arg>Epic sadface: Username is required</arg>
+<status status="PASS" start="2024-10-24T17:10:39.643286" elapsed="0.083718"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:39.951364" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-15.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-15.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.727004" elapsed="0.224360"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:40.414771" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:39.952382" elapsed="0.462389"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:39.727004" elapsed="0.687767"/>
+</kw>
+<tag>invalid</tag>
+<tag>Login</tag>
+<status status="PASS" start="2024-10-24T17:10:37.100337" elapsed="3.314434"/>
+</test>
+<test id="s1-s2-t4" name="Realizar login com senha em branco" line="36">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:40.500966" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\5e896337-6e4b-4bb7-9ad9-a6536e9096f1"}</msg>
+<msg time="2024-10-24T17:10:41.055760" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\5e896337-6e4b-4bb7-9ad9-a6536e9096f1"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:40.500966" elapsed="0.555132"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:42.411493" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:42.411493" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:41.057109" elapsed="1.356364"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:40.500966" elapsed="1.912507"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:42.534086" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.417480" elapsed="0.117613"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:42.631323" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.536227" elapsed="0.095096"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:42.415476" elapsed="0.215847"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:42.673658" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.639167" elapsed="0.036077"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:42.678651" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.676654" elapsed="0.067086"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:42.763733" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.744738" elapsed="0.018995"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:42.765722" level="INFO">Fills the text '' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.764725" elapsed="0.038615"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:42.804338" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.803340" elapsed="0.112043"/>
+</kw>
+<arg>${username}</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-10-24T17:10:42.631323" elapsed="0.284060"/>
+</kw>
+<kw name="Validar mensagem de erro" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:42.944924" level="INFO">Waited for Element with selector css=div.error-message-container.error at state visible</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.920182" elapsed="0.025745"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:43.020482" level="INFO">Text: 'Epic sadface: Password is required'</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>equal</arg>
+<arg>${msgerro}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:42.946301" elapsed="0.074181"/>
+</kw>
+<arg>Epic sadface: Password is required</arg>
+<status status="PASS" start="2024-10-24T17:10:42.915383" elapsed="0.106090"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:43.211357" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-16.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-16.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:43.023099" elapsed="0.188258"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:43.699591" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:43.211357" elapsed="0.488234"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:43.023099" elapsed="0.676492"/>
+</kw>
+<tag>invalid</tag>
+<tag>Login</tag>
+<status status="PASS" start="2024-10-24T17:10:40.492919" elapsed="3.206672"/>
+</test>
+<test id="s1-s2-t5" name="Realizar login com usuario inválido" line="42">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:43.784666" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\9880b920-db72-4ec8-9a74-98d7034a0251"}</msg>
+<msg time="2024-10-24T17:10:44.415408" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\9880b920-db72-4ec8-9a74-98d7034a0251"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:43.782683" elapsed="0.632725"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:45.773706" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:45.773706" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:44.415408" elapsed="1.359271"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:43.782683" elapsed="1.991996"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:45.885378" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:45.777682" elapsed="0.107696"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:45.978948" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:45.886374" elapsed="0.093572"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:45.776686" elapsed="0.203260"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:45.998760" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:45.981942" elapsed="0.018544"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:46.003931" level="INFO">Fills the text 'jfhdgsvxvxv' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:46.000486" elapsed="0.068554"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:46.090778" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:46.070052" elapsed="0.020726"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:46.093781" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:46.091793" elapsed="0.046922"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:46.142671" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:46.138715" elapsed="0.099816"/>
+</kw>
+<arg>${userinvalid}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:45.980943" elapsed="0.259582"/>
+</kw>
+<kw name="Validar mensagem de erro" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:46.263119" level="INFO">Waited for Element with selector css=div.error-message-container.error at state visible</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:46.242525" elapsed="0.020594"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:46.335040" level="INFO">Text: 'Epic sadface: Username and password do not match any user in this service'</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>equal</arg>
+<arg>${msgerro}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:46.263119" elapsed="0.071921"/>
+</kw>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<status status="PASS" start="2024-10-24T17:10:46.241518" elapsed="0.094517"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:46.559287" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-17.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-17.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:46.339039" elapsed="0.220248"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:47.068988" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:46.560277" elapsed="0.508711"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:46.338049" elapsed="0.730939"/>
+</kw>
+<tag>invalid</tag>
+<tag>Login</tag>
+<status status="PASS" start="2024-10-24T17:10:43.777673" elapsed="3.291315"/>
+</test>
+<test id="s1-s2-t6" name="Realizar logout" line="48">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:47.158322" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\6142dc4b-e027-476e-ac54-70e1abd6a88d"}</msg>
+<msg time="2024-10-24T17:10:47.780607" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\6142dc4b-e027-476e-ac54-70e1abd6a88d"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:47.156335" elapsed="0.624272"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:49.197247" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:49.197247" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:47.780607" elapsed="1.416640"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:47.156335" elapsed="2.041894"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:49.340148" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.201237" elapsed="0.138911"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:49.427272" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.341136" elapsed="0.086136"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:49.200232" elapsed="0.227040"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:49.453800" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.427272" elapsed="0.028688"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:49.458958" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.456960" elapsed="0.053660"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:49.533617" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.511613" elapsed="0.022004"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:49.535604" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.534612" elapsed="0.046169"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:49.581534" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.581534" elapsed="0.299475"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-24T17:10:49.427272" elapsed="0.453737"/>
+</kw>
+<kw name="Validar login com sucesso" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:49.925211" level="INFO">Waited for Element with selector css=span[data-test=title] at state visible</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.889018" elapsed="0.037189"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:49.985323" level="INFO">Text: 'Products'</msg>
+<arg>css=span[data-test=title]</arg>
+<arg>equal</arg>
+<arg>${texto_logado}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.927206" elapsed="0.058117"/>
+</kw>
+<arg>Products</arg>
+<status status="PASS" start="2024-10-24T17:10:49.881009" elapsed="0.104314"/>
+</kw>
+<kw name="Clicar em logout" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:50.000569" level="INFO">Waited for Element with selector id=react-burger-menu-btn at state visible</msg>
+<arg>id=react-burger-menu-btn</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:49.988324" elapsed="0.013252"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:50.002576" level="INFO">Clicks the element 'id=react-burger-menu-btn'.</msg>
+<arg>id=react-burger-menu-btn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:50.001576" elapsed="0.240397"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:50.257611" level="INFO">Waited for Element with selector id=logout_sidebar_link at state visible</msg>
+<arg>id=logout_sidebar_link</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:50.242927" elapsed="0.014684"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:50.257611" level="INFO">Clicks the element 'id=logout_sidebar_link'.</msg>
+<arg>id=logout_sidebar_link</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:50.257611" elapsed="0.974081"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:49.987319" elapsed="1.244591"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:51.241511" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:51.231910" elapsed="0.009601"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:51.270251" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:51.242513" elapsed="0.027738"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:51.231910" elapsed="0.039338"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:51.456821" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-18.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-18.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:51.273260" elapsed="0.183561"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:52.025081" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:51.456821" elapsed="0.568260"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:51.272254" elapsed="0.752827"/>
+</kw>
+<tag>Login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2024-10-24T17:10:47.147261" elapsed="4.877820"/>
+</test>
+<test id="s1-s2-t7" name="Realizar login com credenciais em branco" line="56">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-24T17:10:52.136489" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\9d31ecb3-0387-4e8a-9d63-3f56aa29dd48"}</msg>
+<msg time="2024-10-24T17:10:52.799781" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projeto_Robot\\saucedemo-robot\\browser\\traces\\9d31ecb3-0387-4e8a-9d63-3f56aa29dd48"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-24T17:10:52.133478" elapsed="0.666303"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-24T17:10:54.298030" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2024-10-24T17:10:54.298030" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-24T17:10:52.799781" elapsed="1.498249"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:52.132479" elapsed="2.166554"/>
+</kw>
+<kw name="Validar titulo Swag Labs" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:54.411220" level="INFO">Waited for Element with selector css=div[class=login_logo] at state visible</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.303046" elapsed="0.109169"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:54.512097" level="INFO">Text: 'Swag Labs'</msg>
+<arg>css=div[class=login_logo]</arg>
+<arg>equal</arg>
+<arg>${validar_titulo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.413218" elapsed="0.098879"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2024-10-24T17:10:54.301048" elapsed="0.211049"/>
+</kw>
+<kw name="Realizar login" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:54.540737" level="INFO">Waited for Element with selector css=input[placeholder=Username] at state visible</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.512097" elapsed="0.029656"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:54.543739" level="INFO">Fills the text '' in the given field.</msg>
+<arg>css=input[placeholder=Username]</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.541753" elapsed="0.061558"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:54.625046" level="INFO">Waited for Element with selector css=input[placeholder=Password] at state visible</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.604314" elapsed="0.020732"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-10-24T17:10:54.628046" level="INFO">Fills the text '' in the given field.</msg>
+<arg>css=input[placeholder=Password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.626047" elapsed="0.053831"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-24T17:10:54.681874" level="INFO">Clicks the element 'css=input[name=login-button]'.</msg>
+<arg>css=input[name=login-button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.680870" elapsed="0.112715"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-10-24T17:10:54.512097" elapsed="0.281488"/>
+</kw>
+<kw name="Validar mensagem de erro" owner="Login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-24T17:10:54.820573" level="INFO">Waited for Element with selector css=div.error-message-container.error at state visible</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.798583" elapsed="0.022989"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-10-24T17:10:54.915941" level="INFO">Text: 'Epic sadface: Username is required'</msg>
+<arg>css=div.error-message-container.error</arg>
+<arg>equal</arg>
+<arg>${msgerro}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.821572" elapsed="0.094369"/>
+</kw>
+<arg>Epic sadface: Username is required</arg>
+<status status="PASS" start="2024-10-24T17:10:54.796568" elapsed="0.120376"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-10-24T17:10:55.134455" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-19.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-19.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-10-24T17:10:54.919935" elapsed="0.214520"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-24T17:10:55.644852" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-24T17:10:55.134455" elapsed="0.510397"/>
+</kw>
+<status status="PASS" start="2024-10-24T17:10:54.918938" elapsed="0.725914"/>
+</kw>
+<tag>invalid</tag>
+<tag>Login</tag>
+<status status="PASS" start="2024-10-24T17:10:52.123501" elapsed="3.521351"/>
+</test>
+<doc>Suite de testes automatizados para página de login saucedemo</doc>
+<status status="PASS" start="2024-10-24T17:10:30.155976" elapsed="25.577438"/>
+</suite>
+<status status="PASS" start="2024-10-24T17:10:04.158576" elapsed="51.646358"/>
+</suite>
+<statistics>
+<total>
+<stat pass="13" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">invalid</stat>
+<stat pass="7" fail="0" skip="0">Login</stat>
+<stat pass="2" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="13" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Home">Tests.Home</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s2" name="Login">Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
