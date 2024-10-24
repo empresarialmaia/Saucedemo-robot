@@ -1,1 +1,4 @@
 *.robot linguist-language=RobotFramework
+*.resource linguist-language=RobotFramework
+*.html linguist-vendored
+
