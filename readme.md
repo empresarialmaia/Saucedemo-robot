@@ -12,20 +12,20 @@ Antes de rodar o projeto, certifique-se de que você tem as seguintes ferramenta
 
 - **Python** (versão 3.12.5 ou superior): [Instalar Python] https://www.python.org/downloads/
 
-- **Robot Framework**: 
-  ```bash 
- pip install robotframework-browser
+- **Robot Framework:**  
 
- python -m playwright install
+pip install robotframework-browser
 
-- **Clonar o repositório:**
+python -m playwright install
 
-git clone https://github.com/empresarialmaia/Saucedemo-robot.git
+## Clonar o repositório:
 
-- **Executar os testes:**
- Use o comando abaixo para executar os testes:
+**git clone https://github.com/empresarialmaia/Saucedemo-robot.git**
+
+## Executar os testes:
+Use o comando abaixo para executar os testes:
  
- robot tests
+**robot tests**
 
 
 
