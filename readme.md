@@ -14,9 +14,9 @@ Antes de rodar o projeto, certifique-se de que você tem as seguintes ferramenta
 
 - **Robot Framework:**  
 
-   pip install robotframework-browser
+        pip install robotframework-browser
 
-   python -m playwright install
+        python -m playwright install
 
 ## Clonar o repositório:
 
@@ -25,7 +25,7 @@ Antes de rodar o projeto, certifique-se de que você tem as seguintes ferramenta
 ## Executar os testes:
 Use o comando abaixo para executar os testes:
  
-**robot tests**
+        robot tests
 
 
 
