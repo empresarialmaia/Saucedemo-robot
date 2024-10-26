@@ -36,7 +36,7 @@ Login dados em branco
     Click                      css=input[name=login-button]   
 
 Realizar login com usuario em branco
-     [arguments]    ${EMPTY}    ${password}
+     [Arguments]    ${EMPTY}    ${password}
     Wait For Elements State    css=input[placeholder=username]    visible    5
     Fill Text                  css=input[placeholder=username]    ${EMPTY}     
     Wait For Elements State    css=input[placeholder=Password]    visible    5
@@ -44,7 +44,7 @@ Realizar login com usuario em branco
     Click                      css=input[name=login-button]   
 
 Realizar login com senha em branco
-    [arguments]    ${username}    ${EMPTY}
+    [Arguments]    ${username}    ${EMPTY}
     Wait For Elements State    css=input[placeholder=username]    visible    5
     Fill Text                  css=input[placeholder=username]    ${username}    
     Wait For Elements State    css=input[placeholder=Password]    visible    5
@@ -52,7 +52,7 @@ Realizar login com senha em branco
     Click                      css=input[name=login-button]  
 
 Realizar login com usuario  
-    [arguments]    ${userinvalid}    ${password}
+    [Arguments]    ${userinvalid}    ${password}
     Wait For Elements State    css=input[placeholder=username]    visible    5
     Fill Text                  css=input[placeholder=username]    ${userinvalid}    
     Wait For Elements State    css=input[placeholder=Password]    visible    5
@@ -60,7 +60,7 @@ Realizar login com usuario
     Click                      css=input[name=login-button]  
 
 Validar mensagem de erro
-    [arguments]    ${msgerro}
+    [Arguments]    ${msgerro}
     Wait For Elements State    css=div.error-message-container.error      visible    5
     Get Text                   css=div.error-message-container.error      equal      ${msgerro}
 
