@@ -8,7 +8,7 @@ Library    Browser
 Validar produto desejado 
     [Arguments]    ${titulo_produto}    ${id_produto_desejado} 
     Wait For Elements State    ${id_produto_desejado}    visible    5
-    Get Text    ${id_produto_desejado}    equal    ${titulo_produto}    
+    Get Text                   ${id_produto_desejado}    equal    ${titulo_produto}    
 
 Validar quantidade no carrinho
     [Arguments]    ${quantidade_add}

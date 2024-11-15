@@ -1,0 +1,29 @@
+# Ignorar diretórios e arquivos de execução
+output/
+log/
+report/
+browser/  
+
+# Ignorar arquivos de configuração locais
+*.env
+*.local
+
+# Ignorar arquivos temporários de editores de texto
+.vscode/
+.idea/
+*.swp
+
+# Ignorar arquivos de cache de pacotes Python
+*.pyc
+__pycache__/
+
+# Ignorar dependências instaladas (se estiver usando pip)
+venv/
+.env/
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de lock do pip
+Pipfile.lock
