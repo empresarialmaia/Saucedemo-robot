@@ -20,7 +20,7 @@ Antes de rodar o projeto, certifique-se de que você tem as seguintes ferramenta
 
 ## Clonar o repositório:
 
-**git clone https://github.com/empresarialmaia/Saucedemo-robot.git**
+**git clone https://github.com/empresarialmaia/saucedemo-robot.git**
 
 ## Executar os testes:
 Use o comando abaixo para executar os testes:
